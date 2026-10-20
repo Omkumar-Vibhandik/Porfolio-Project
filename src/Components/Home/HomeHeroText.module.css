@@ -1,0 +1,72 @@
+.heading {
+  color: #1A7EFF;
+}
+
+.typeWriter-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+/* for the heading */
+.typeWriter {
+  text-align: center;
+  overflow: hidden;
+  border-right: 0.15em solid #0f0;
+  white-space: nowrap;
+  width: 0;
+  animation:
+    typing 5s steps(30, end) forwards,
+    blink 0.75s step-end infinite;
+  animation-delay: 1.4s;
+}
+@keyframes typing {
+  from {
+    width: 0;
+  }
+  to {
+    width: 18ch;
+  }
+}
+@keyframes blink {
+  50% {
+    border-color: transparent;
+  }
+}
+
+/* stretch for heading name */
+.stretcDiagonal {
+  transform: scale(5, 5);
+  animation: stretchDiagonal 0.8s ease-out forwards;
+}
+@keyframes stretchDiagonal {
+  0% {
+    transform: scale(5, 5);
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    transform: scale(1, 1);
+    opacity: 1;
+  }
+}
+
+.textUnderline {
+  position: relative;
+  display: inline-block;
+}
+.textUnderline::after {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 2px;
+  bottom: -3px;
+  left: 0;
+  background: #ffffff;
+  transition: width 0.4s ease;
+}
+.textUnderline:hover::after {
+  width: 100%;
+}

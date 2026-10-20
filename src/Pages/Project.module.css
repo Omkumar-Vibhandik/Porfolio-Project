@@ -1,0 +1,11 @@
+.aboutBold {
+  font-weight: 900;
+}
+
+.aboutLine {
+  width: 800px;
+  height: 3px;
+  background: linear-gradient(to right, transparent, gray, transparent);
+  margin: 20px auto;
+  opacity: 0.5;
+}

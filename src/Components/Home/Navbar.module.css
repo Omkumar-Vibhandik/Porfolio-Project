@@ -1,0 +1,72 @@
+.bg:hover {
+  box-shadow: 1px 2px 15px #ffbf007c;
+  transition: ease-in-out;
+}
+
+.bg {
+  background: transparent;
+  box-shadow: 1px 1px 15px px #ffbf006b;
+  transition: ease-in-out 1.5s; /* property | duration | timing | delay */
+}
+
+.textAnime {
+  display: inline-block;
+  transition: all 0.4s ease;
+}
+.textAnime:hover {
+  color: #ff0066;
+  transform: scale(1.2);
+}
+
+.textAnim2 {
+  position: relative;
+  display: inline-block;
+}
+.textAnim2::after {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 2px;
+  bottom: -3px;
+  left: 0;
+  background: #ffffff;
+  transition: width 0.4s ease;
+}
+.textAnim2:hover::after {
+  width: 100%;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .bg {
+    box-shadow: 0 2px 10px #ffbf006b;
+    padding: 0 10px;
+  }
+  .textAnime {
+    font-size: 16px;
+  }
+  .textAnime2 {
+    font-size: 18px;
+  }
+  .textAnim2 {
+    font-size: 16px;
+    margin: 0 4px;
+  }
+}
+
+@media (max-width: 480px) {
+  .bg {
+    box-shadow: 0 1px 6px #ffbf006b;
+    padding: 0 4px;
+  }
+  .textAnime {
+    font-size: 14px;
+  }
+  .textAnime2 {
+    font-size: 15px;
+  }
+  .textAnim2 {
+    font-size: 14px;
+    margin: 0 2px;
+  }
+}

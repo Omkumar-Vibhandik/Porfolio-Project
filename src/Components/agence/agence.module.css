@@ -1,0 +1,139 @@
+.shadow:hover {
+  box-shadow: 0 8px 25px rgba(251, 247, 247, 0.5);
+  transform: translateY(-15px);
+  /* transform: scale(1.2); */
+  transition: 0.1s;
+}
+
+.backVideo {
+  filter: blur(3px);
+  -webkit-filter: blur(2px); /* Safari */
+  filter: brightness(0.6);
+  /* background: rgba(0, 0, 0, 0.5); */
+  background: rgba(255, 255, 255, 0.682); /* transparent white */
+  opacity: 0.6;
+}
+
+/* For My name heading  */
+.auroraHeading {
+  font-weight: 800;
+  color: #ffbf00;
+  position: relative;
+  overflow: hidden;
+  display: inline-block;
+  letter-spacing: 0.05em;
+  opacity: 0;
+  transform: translateY(40px);
+  animation: fadeUp 5s ease forwards;
+}
+
+/* Aurora gradient waves #06b6d4, #6366f1, #a855f7, #06b6d4*/
+.auroraHeading::before {
+  content: attr(data-text);
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: conic-gradient(from 0deg, #d43306, #f18263, #f79e55, #d47706);
+  background-size: 200% 200%;
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: aurora 8s ease infinite;
+}
+
+/* Floating glow layer */
+.auroraHeading::after {
+  content: "";
+  position: absolute;
+  inset: -20%;
+  background: radial-gradient(
+    circle at 50% 50%,
+    rgba(217, 120, 249, 0.503),
+    transparent 60%
+  );
+  filter: blur(40px);
+  z-index: -1;
+  animation: floatGlow 6s ease-in-out infinite alternate;
+}
+
+/* Animations */
+@keyframes aurora {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+@keyframes floatGlow {
+  0% {
+    transform: translateY(0px);
+    opacity: 0.6;
+  }
+  100% {
+    transform: translateY(-15px);
+    opacity: 1;
+  }
+}
+@keyframes fadeUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.bold {
+  font-weight: bolder;
+}
+
+/* Responsive Styles */
+@media (max-width: 1200px) {
+  .auroraHeading {
+    font-size: 40px !important;
+  }
+}
+
+@media (max-width: 1024px) {
+  .auroraHeading {
+    font-size: 32px !important;
+  }
+}
+
+@media (max-width: 900px) {
+  .auroraHeading {
+    font-size: 28px !important;
+  }
+}
+
+@media (max-width: 900px) {
+  .shadow {
+    width: 320px !important;
+    height: 350px !important;
+    margin-left: 0 !important;
+  }
+}
+
+@media (max-width: 768px) {
+  .auroraHeading {
+    font-size: 22px !important;
+  }
+  .shadow {
+    width: 220px !important;
+    height: 250px !important;
+    margin-left: 0 !important;
+  }
+}
+
+@media (max-width: 600px) {
+  .auroraHeading {
+    font-size: 16px !important;
+  }
+  .shadow {
+    width: 140px !important;
+    height: 160px !important;
+    margin-left: 0 !important;
+  }
+}

@@ -1,0 +1,46 @@
+@import "tailwindcss";
+@tailwind utilities;
+
+@font-face {
+  font-family: font1;
+  src: url(../public/Fonts/RomeoItalic-dreBg.ttf);
+}
+@font-face {
+  font-family: font2;
+  src: url(../public/Fonts/Geist-Bold.ttf);
+}
+
+@font-face {
+  font-family: font3;
+  src: url(../public/Fonts/Aqua-V4Kxz.ttf);
+}
+@font-face {
+  font-family: font4;
+  src: url(../public/Fonts/EnceladusDemibold-mL18a.otf);
+}
+@font-face {
+  font-family: font5;
+  src: url(../public/Fonts/FearLogoItalic-rvrZA.ttf);
+}
+@font-face {
+  font-family: font6;
+  src: url(../public/Fonts/Geist-Regular.ttf);
+}
+
+@font-face {
+  font-family: font7;
+  src: url(../public/Fonts/Fraunces-Regular-VariableFont_wght.ttf);
+}
+@font-face {
+  font-family: font8;
+  src: url(../public/Fonts/Geist-Regular.ttf);
+}
+
+body {
+  background-color: black;
+  overflow-x: hidden;
+}
+
+html {
+  scroll-behavior: smooth;
+}
