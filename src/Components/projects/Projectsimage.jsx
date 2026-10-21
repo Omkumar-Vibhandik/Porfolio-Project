@@ -9,7 +9,21 @@ const Projectsimage = (props) => {
       {projects.map((project) => (
         <article key={project.text} className={styles.projectCard}>
           <div className={`${styles.imgCard} ${styles.projectImage}`}>
-            <img src={project.src} alt={`${project.text} project preview`} />
+            {project.link ? (
+              <a
+                className={styles.projectLink}
+                target="_blank"
+                rel="noopener noreferrer"
+                href={project.link}
+              >
+                <img
+                  src={project.src}
+                  alt={`${project.text} project preview`}
+                />
+              </a>
+            ) : (
+              <img src={project.src} alt={`${project.text} project preview`} />
+            )}
           </div>
           <div className={styles.projectDetails}>
             <h3 className={styles.projectTitle}>{project.text}</h3>

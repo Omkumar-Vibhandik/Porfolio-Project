@@ -12,6 +12,7 @@ const Projects = () => {
       image1: {
         text: "Voyager Loop",
         src: "./src/assets/VoyagerLoop.png",
+        link: "https://voyagerloop.onrender.com/listings",
         description:
           "A travel platform for discovering destinations and exploring stays.",
         tech: ["React", "Node.js", "Express", "MongoDB"],
@@ -19,6 +20,7 @@ const Projects = () => {
       image2: {
         text: "Iron Man",
         src: "./src/assets/ironman.jpg",
+        link: "https://voyagerloop.onrender.com/listings",
         description:
           "A project showcasing a futuristic, Iron Man-inspired interface.",
         tech: ["React", "CSS", "JavaScript"],
@@ -28,12 +30,14 @@ const Projects = () => {
       image1: {
         text: "Batman",
         src: "./src/assets/batman.jpg",
+        link: "https://voyagerloop.onrender.com/listings",
         description: "A dark-themed interface inspired by Batman.",
         tech: ["React", "Tailwind CSS"],
       },
       image2: {
         text: "Spider Man",
         src: "./src/assets/spider.jpg",
+        link: "https://voyagerloop.onrender.com/listings",
         description: "A superhero-themed project with a dynamic visual design.",
         tech: ["HTML", "CSS", "JavaScript"],
       },
@@ -46,7 +50,7 @@ const Projects = () => {
     gsap.from(".hero", {
       height: "100px",
       stagger: {
-        amount: 0.6,
+        amount: 0.7,
       },
       scrollTrigger: {
         trigger: ".lol",
